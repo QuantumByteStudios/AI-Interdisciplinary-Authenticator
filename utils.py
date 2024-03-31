@@ -54,10 +54,6 @@ def aiInterdisciplinaryAuth(prompt):
                 return NEGATIVE
     return POSITIVE
 
-# # Example usage:
-# prompt_status = aiInterdisciplinaryAuth("write 10 words short message to jeetu mamtora")
-# print(prompt_status)
-
 
 def askLlama(message):
     # Variables
@@ -69,9 +65,7 @@ def askLlama(message):
 
     # Send Request to the local server
     output = subprocess.check_output(command, shell=True)
-
     result = output.decode('utf-8')
-
     # print(result) # Debugging
 
     # Fetch "Response" from each line of a string
@@ -92,7 +86,6 @@ def askLlama(message):
     #     print(word, end='', flush=True)
     #     sys.stdout.flush()
     #     subprocess.run("sleep 0.1", shell=True)
-
     # print("\n")
 
     return response

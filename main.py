@@ -1,4 +1,4 @@
-import customtkinter as ctk
+import customtkinter as ctk  # ignore the error, it's just a warning
 import tkinter as tk
 from tkinter import messagebox
 import sqlite3
