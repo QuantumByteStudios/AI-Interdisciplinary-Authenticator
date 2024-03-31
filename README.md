@@ -81,4 +81,4 @@ The "AI Interdisciplinary Authenticator" project aligns seamlessly with contempo
 
 ## License
 
-[LICENSE.md](LICENSE.md)
+[LICENSE](LICENSE)
