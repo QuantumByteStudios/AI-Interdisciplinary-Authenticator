@@ -18,50 +18,52 @@ class aiAuthLogin:
 
         # Login elements
         self.login_frame = tk.Frame(self.root, bg="#242424")
-        self.login_frame.pack(side=tk.LEFT, padx=10, pady=10)
+        self.login_frame.pack(side=tk.LEFT, fill=tk.BOTH,
+                              expand=True, padx=10, pady=10)
 
         self.username_label = tk.Label(
             self.login_frame, text="Enter your username", **label_style)
-        self.username_label.pack()
+        self.username_label.pack(anchor=tk.W)
 
         self.username_entry = tk.Entry(
             self.login_frame, width=40, bg="#2E2E2E", fg="white", font=("Arial", 16))
-        self.username_entry.pack(pady=5)
+        self.username_entry.pack(anchor=tk.W, pady=5)
 
         self.password_label = tk.Label(
             self.login_frame, text="Enter your password", **label_style)
-        self.password_label.pack()
+        self.password_label.pack(anchor=tk.W)
 
         self.password_entry = tk.Entry(
             self.login_frame, width=40, bg="#2E2E2E", fg="white", font=("Arial", 16), show="*")
-        self.password_entry.pack(pady=5)
+        self.password_entry.pack(anchor=tk.W, pady=5)
 
         self.login_button = ctk.CTkButton(
             self.login_frame, text="Login", command=self.login)
-        self.login_button.pack(pady=10)
+        self.login_button.pack(anchor=tk.W, padx=(0, 10), pady=10)
 
         self.register_button = ctk.CTkButton(
             self.login_frame, text="Register", command=self.register_user)
-        self.register_button.pack(pady=10)
+        self.register_button.pack(anchor=tk.W, padx=(0, 10), pady=10)
 
         label_style = {"bg": "#242424", "fg": "white",
                        "font": ("Arial", 16), "pady": 5, "padx": 10}
 
         # Prompt elements
         self.prompt_frame = tk.Frame(self.root, bg="#242424")
-        self.prompt_frame.pack(side=tk.LEFT, padx=10, pady=10)
+        self.prompt_frame.pack(side=tk.LEFT, fill=tk.BOTH,
+                               expand=True, padx=10, pady=10)
 
         self.prompt_label = tk.Label(
             self.prompt_frame, text="Secure a prompt", **label_style)
-        self.prompt_label.pack(pady=5)
+        self.prompt_label.pack(anchor=tk.W)
 
         self.prompt_entry = tk.Entry(
             self.prompt_frame, width=40, bg="#2E2E2E", fg="white", font=("Arial", 16))
-        self.prompt_entry.pack(pady=5)
+        self.prompt_entry.pack(anchor=tk.W, pady=5)
 
         self.add_prompt_button = ctk.CTkButton(
             self.prompt_frame, text="Add Prompt", command=self.add_prompt)
-        self.add_prompt_button.pack(pady=10)
+        self.add_prompt_button.pack(anchor=tk.W, pady=10)
 
         # Initially hide the prompt elements
         self.prompt_frame.pack_forget()
