@@ -1,5 +1,3 @@
-### Project Title:
-
 # AI Interdisciplinary Authenticator
 
 ### Problem Statement:
@@ -36,38 +34,51 @@ Secure User Registration: Employ state-of-the-art security measures in the regis
 
 The "AI Interdisciplinary Authenticator" project aligns seamlessly with contemporary concerns surrounding data privacy and the responsible deployment of AI technologies. By amalgamating cutting-edge user authentication techniques with AI model integration, the project aspires to contribute to a heightened level of security and resilience in the face of evolving threats.
 
-Certainly! If "Pay To Protect" is a subscription-based model, the description can be adjusted accordingly:
+## Dependencies
 
-### Future Scope:
+- **llama2-uncensored**: [version]
+  - Description: Llama 2 Uncensored is based on Meta’s Llama 2 model, and was created by George Sung and Jarrad Hope using the process defined by Eric Hartford
+  - Installation: <a href="https://ollama.com/">https://ollama.com</a>
 
-#### "Pay To Protect" Subscription Model Integration
+- **customtkinter**: [version]
+  - Description: Customtkinter is a customized version of the Tkinter library, offering additional features and functionalities for building graphical user interfaces (GUIs) in Python.
+  - Installation: `pip install customtkinter`
 
-As a forward-looking strategy, the project envisions the incorporation of a monthly subscription-based model named "Pay To Protect." This model is designed to provide users with a recurring, premium service within the "AI Interdisciplinary Authenticator" ecosystem, ensuring continuous protection against AI-generated threats.
+- **Python**: 3.12
+  - Description: Python programming language, widely used for various applications including web development, data analysis, artificial intelligence, and more.
+  - Installation: Refer to [Python's official website](https://www.python.org/) for installation instructions.
 
-### Key Components of the "Pay To Protect" Monthly Subscription Model:
+- **Linux**: (Any)
+  - Description: Linux operating system, known for its stability, security, and open-source nature, commonly used for server hosting and development environments.
+  - Installation: Refer to [Linux's official website](https://www.linux.org/) for installation instructions.
 
-- Continuous Protection: Subscribers benefit from uninterrupted protection against AI-generated threats, ensuring the ongoing security of their sensitive information. The monthly subscription model guarantees access to enhanced features designed to fortify user data against evolving AI risks.
+- **SQLite**:
+  - Description: SQLite is a lightweight, self-contained, serverless SQL database engine, commonly used for embedded systems, mobile applications, and small-scale database management.
+  - Installation: SQLite is included in Python's standard library. No additional installation needed.
 
-- Regular Feature Updates: Subscribers receive regular updates to authentication features, data encryption protocols, and AI model interaction algorithms. This ensures that users remain at the forefront of technological advancements in the realm of data protection.
+## Requirements
 
-- Exclusive Customer Support: Paying subscribers enjoy priority access to customer support services, ensuring prompt assistance in case of any concerns, questions, or issues related to their protected information.
+- Python (>= 3.10)
+- Linux operating system (recommended)
+- SQLite (included with Python)
+- Large Language Model: llama2-uncensored
 
-- Adaptive Security Measures: The subscription model includes adaptive security measures that evolve with the changing landscape of AI threats, providing subscribers with a proactive defense against emerging risks.
+## Installation
 
-### Benefits of the "Pay To Protect" Monthly Subscription Model:
+1. Clone the repository:
 
-- Predictable Revenue Stream: The monthly subscription model establishes a predictable and consistent revenue stream, supporting ongoing maintenance, updates, and the development of cutting-edge security features.
+    ```bash
+    git clone https://github.com/QuantumByteStudios/AI-Interdisciplinary-Authenticator
+    ```
 
-- Enhanced User Experience: Subscribers experience an enhanced level of service, benefiting from continuous protection and access to the latest security enhancements. This contributes to user satisfaction and loyalty.
+2. Install Python (if not already installed). Refer to [Python's official website](https://www.python.org/) for installation instructions.
 
-- Tailored Security Solutions: Subscribers can customize their level of protection based on evolving needs, leveraging the flexibility of the monthly subscription model to adjust features as required.
+3. Install project dependencies:
 
-### Considerations for Implementation:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-- Transparent Pricing: Clearly communicate the monthly subscription pricing structure, ensuring transparency and enabling users to make informed decisions about the level of protection they desire.
+## License
 
-- Seamless Billing and Management: Implement a user-friendly billing and subscription management system, allowing subscribers to easily manage their monthly subscription, including upgrades, downgrades, or cancellations.
-
-- Trial Periods and Incentives: Consider offering trial periods or introductory incentives to encourage users to experience the benefits of the monthly subscription model before committing to a full subscription.
-
-The "Pay To Protect" monthly subscription model enhances the financial sustainability of the project while offering users a flexible and adaptive solution to safeguard their information against the dynamic landscape of AI threats.
+[LICENSE.md]()
