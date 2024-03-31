@@ -162,3 +162,5 @@ cython_debug/
 # Custom
 .vscode/
 user_database.db
+test.py
+tempCodeRunnerFile.py

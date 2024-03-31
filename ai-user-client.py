@@ -1,16 +1,13 @@
 import tkinter as tk
 import customtkinter as ctk
-import threading
 import utils
-import bard
 
 
 class ChatApp(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("Generative AI Chat - PaLM 2 - Google AI")
+        self.title("Generative AI Chat Client")
         self.geometry("400x600")
-        # self.iconbitmap("/src/icon/icon.ico")
         self.config(bg="#121212")
 
         self.option_add("*Font", "Arial")
@@ -60,7 +57,7 @@ class ChatApp(ctk.CTk):
 
         # Create a button to send messages
         self.send_button = tk.Button(
-            text="Ask PaLM 2", command=self.send_message, bg="#007BFF", fg="white", font=("Arial", 12))
+            text="Ask AI", command=self.send_message, bg="#007BFF", fg="white", font=("Arial", 12))
         self.send_button.grid(row=2, column=0, columnspan=2,
                               padx=10, pady=10, ipadx=10, ipady=10, sticky="ew")
         self.send_button.grid_columnconfigure(0, weight=1)
@@ -78,21 +75,20 @@ class ChatApp(ctk.CTk):
         if message:
             self.display_message(f"\nYou: {message}")
             self.input_entry.delete(0, tk.END)
-
             response = utils.aiInterdisciplinaryAuth(message.lower())
-
-            print(response)
-
-            if response["status"] == "NEGATIVE":
-                self.display_message(
-                    "\nPaLM 2: \nI'm sorry, I cannot respond to that.")
+            # print(response)
+            if response["status"] == "POSITIVE":
+                print(f"{utils.colors.GREEN}{response}{utils.colors.END}")
+                ai_response = utils.askLlama(message)
+                self.display_message(f"\nAI: {ai_response}")
             else:
-                threading.Thread(target=self.process_bot_response, args=(
-                    bard.askBard(message.lower()),)).start()
+                print(f"{utils.colors.RED}{response}{utils.colors.END}")
+                ai_response = "I'm sorry, but I can't help you with this."
+                self.display_message(f"\nAI: {ai_response}")
 
     # process bot response
     def process_bot_response(self, message):
-        bot_response = f"\nPaLM 2: \n{message}"
+        bot_response = f"\nAI: \n{message}"
         self.display_message(bot_response)
 
     # display message in chat display
