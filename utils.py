@@ -32,7 +32,8 @@ def aiInterdisciplinaryAuth(prompt):
     POSITIVE = {"prompt": prompt, "status": "POSITIVE"}
 
     prompt = prompt.lower()
-    prompt = prompt.split()
+    # prompt = prompt.split()
+    # print(prompt)
 
     connection = sqlite3.connect('user_database.db')
     cursor = connection.cursor()
@@ -43,15 +44,14 @@ def aiInterdisciplinaryAuth(prompt):
     table_exists = cursor.fetchone()
 
     if table_exists:
-        for word in prompt:
-            cursor.execute(
-                f"SELECT * FROM prompts WHERE prompt LIKE '%{word}%'")
-            row = cursor.fetchone()
-            # print(row)
-            if row == None:
-                continue
-            else:
-                return NEGATIVE
+        cursor.execute(
+            f"SELECT * FROM prompts WHERE prompt = '{prompt}'")
+        row = cursor.fetchone()
+        # print(row)
+        if row == None:
+            return POSITIVE
+        else:
+            return NEGATIVE
     return POSITIVE
 
 
